@@ -2,53 +2,61 @@
 using NewTCEApp.Services;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Xamarin.Forms;
 
 namespace NewTCEApp.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged
+	public class detail
+	{
+		public string Title { get; set; }
+		public string Url { get; set; }
+		public string Location { get; set; }
+	}
+	public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+		
 
-        bool isBusy = false;
-        public bool IsBusy
-        {
-            get { return isBusy; }
-            set { SetProperty(ref isBusy, value); }
-        }
+		bool isBusy;
+		string title;
 
-        string title = string.Empty;
-        public string Title
-        {
-            get { return title; }
-            set { SetProperty(ref title, value); }
-        }
+		public ObservableCollection<Event> Events { get; }
 
-        protected bool SetProperty<T>(ref T backingStore, T value,
-            [CallerMemberName] string propertyName = "",
-            Action onChanged = null)
-        {
-            if (EqualityComparer<T>.Default.Equals(backingStore, value))
-                return false;
+		public bool IsBusy
+		{
+			get => isBusy;
+			set
+			{
+				if (isBusy == value)
+					return;
+				isBusy = value;
+				OnPropertyChanged();
+				// Also raise the IsNotBusy property changed
+				OnPropertyChanged(nameof(IsNotBusy));
+			}
+		}
 
-            backingStore = value;
-            onChanged?.Invoke();
-            OnPropertyChanged(propertyName);
-            return true;
-        }
+		public bool IsNotBusy => !IsBusy;
+		public string Title
+		{
+			get => title;
+			set
+			{
+				if (title == value)
+					return;
+				title = value;
+				OnPropertyChanged();
+			}
+		}
+		public BaseViewModel()
+		{
 
-        #region INotifyPropertyChanged
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            var changed = PropertyChanged;
-            if (changed == null)
-                return;
+		}
 
-            changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-        #endregion
-    }
+		public void OnPropertyChanged([CallerMemberName] string name = null) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+
+		public event PropertyChangedEventHandler PropertyChanged;
+	}
 }
