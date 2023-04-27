@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    x:Class="NewTCEApp.Views.CalendarPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xc="clr-namespace:XCalendar.Forms.Views;assembly=XCalendar.Forms">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <xc:CalendarView
+            BackgroundColor="Orange"
+            BackwardsArrowCommand="{Binding NavigateCalendarCommand}"
+            Days="{Binding MyCalendar.Days}"
+            DaysOfWeek="{Binding MyCalendar.DayNamesOrder}"
+            ForwardsArrowCommand="{Binding NavigateCalendarCommand}"
+            NavigatedDate="{Binding MyCalendar.NavigatedDate}">
+
+                <xc:CalendarView.ForwardsArrowCommandParameter>
+                    <x:Int32>1</x:Int32>
+                </xc:CalendarView.ForwardsArrowCommandParameter>
+
+                <xc:CalendarView.BackwardsArrowCommandParameter>
+                    <x:Int32>-1</x:Int32>
+                </xc:CalendarView.BackwardsArrowCommandParameter>
+            </xc:CalendarView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
