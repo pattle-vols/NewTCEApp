@@ -1,12 +1,10 @@
-﻿using NewTCEApp.ViewModels;
-using NewTCEApp.Views;
+﻿using NewTCEApp.Views;
 using System;
-using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace NewTCEApp
 {
-    public partial class AppShell : Xamarin.Forms.Shell
+    public partial class AppShell : Shell
     {
         public AppShell()
         {

@@ -9,7 +9,7 @@ namespace NewTCEApp.ViewModels
 {
 	[QueryProperty("Event", "Event")]
 
-
+	
 	public partial class EventDetailsViewModel : BaseViewModel
 	{
 
@@ -17,7 +17,7 @@ namespace NewTCEApp.ViewModels
 		{
 		}
 
-
+		
 
 		//[ObservableProperty]
 		//Event Event;

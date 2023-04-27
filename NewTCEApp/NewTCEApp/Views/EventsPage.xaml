@@ -68,19 +68,20 @@
                                         -->
                                     </Grid>
                                 </StackLayout>
-
+                                
                             </Grid>
                         </Frame>
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-
+            
         </CollectionView>
 
-        <Button Text="Reload"
+        <Button Text="Load"
                 Command="{Binding GetEventsCommand}"
                 IsEnabled="{Binding IsNotBusy}"
                 Grid.Row="1"
+                Grid.ColumnSpan="2"
                 Margin="2"/>
         <ActivityIndicator IsVisible="{Binding IsBusy}"
                            IsRunning="{Binding IsBusy}"

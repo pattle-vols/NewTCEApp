@@ -21,5 +21,13 @@ namespace NewTCEApp.Views
 		{
 			InitializeComponent();
 		}
+		/*
+		async void itemSelect(object sender, SelectedItemChangedEventArgs e)
+		{
+			//var item = (Event)e.SelectedItem;
+			var item = e.SelectedItem as Event;
+			await Navigation.PushAsync(new DetailsPage(item.Url));
+		}
+		*/
 	}
 }

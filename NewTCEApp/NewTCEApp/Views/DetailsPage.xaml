@@ -7,7 +7,6 @@
              xmlns:viewmodel="clr-namespace:NewTCEApp.ViewModels"
              x:Class="NewTCEApp.Views.DetailsPage"
              Title="Detailed View"
-             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" xmlns:viewmodels="clr-namespace:NewTCEApp.ViewModels" x:DataType="viewmodel:EventsViewModel"
              ios:Page.UseSafeArea="True">
     <ContentPage.BindingContext>
         <viewmodel:EventDetailsViewModel/>
@@ -15,8 +14,14 @@
     <ContentPage.Content>
         <Grid ColumnDefinitions="*,*"
               RowDefinitions="*,Auto">
+            
+            <WebView Source="{Binding Url}"
+                     Grid.ColumnSpan="2"/>
+            <!---->
+            <!--
             <WebView Source="https://google.com"
                      Grid.ColumnSpan="2"/>
+            -->
             <!--
             <Button Text="Get Directions"
                     Grid.Row="1"

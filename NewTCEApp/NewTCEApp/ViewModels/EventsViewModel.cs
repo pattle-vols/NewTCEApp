@@ -30,6 +30,7 @@ namespace NewTCEApp.ViewModels
 			Events = new ObservableCollection<Event>();
 
 			GetEventsCommand = new Command(async () => await GetEventsAsync());
+
 		}
 
 		[RelayCommand]
@@ -40,7 +41,7 @@ namespace NewTCEApp.ViewModels
 			DetailsPage.InitPage(@event.Title, @event.Url, @event.Location);
 			await Shell.Current.GoToAsync($"{nameof(DetailsPage)}?info={@event.Url}");
 		}
-
+		
 		HttpClient httpClient;
 		HttpClient Client => httpClient ?? (httpClient = new HttpClient());
 
@@ -125,7 +126,7 @@ namespace NewTCEApp.ViewModels
 				for (var i = 0; i < titles.Count; i++)
 				{
 					Event tmp = new Event();
-
+					
 					//tmp.Title = titles[i].InnerText;
 					tmp.Title = RemoveWhiteSpaceInString(titles[i].InnerText);
 					//tmp.Description = summaries[i].InnerText;
@@ -136,7 +137,7 @@ namespace NewTCEApp.ViewModels
 					tmp.Time = RemoveWhiteSpaceInString(times[i].InnerText);
 					tmp.Url = urls[i];
 					tmp.Image = images[i];
-
+					
 					//Debug.WriteLine(tmp.Title);
 					data.Add(tmp);
 				}
