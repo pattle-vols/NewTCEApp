@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage 
     x:Class="NewTCEApp.Views.CalendarPage"
+    Shell.BackgroundColor="#58595B"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:xc="clr-namespace:XCalendar.Forms.Views;assembly=XCalendar.Forms">
