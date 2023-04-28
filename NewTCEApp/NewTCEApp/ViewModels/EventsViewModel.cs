@@ -10,15 +10,13 @@ using System.Diagnostics;
 using Xamarin.Forms;
 using System.Linq;
 using NewTCEApp.Models;
-using NewTCEApp.ViewModels;
 using NewTCEApp.Views;
 using System.Text;
-using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
 namespace NewTCEApp.ViewModels
 {
-	public partial class EventsViewModel : BaseViewModel
+    public partial class EventsViewModel : BaseViewModel
 	{
 		public ObservableCollection<Event> Events { get; }
 		public Command GetEventsCommand { get; }

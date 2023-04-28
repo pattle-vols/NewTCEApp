@@ -20,6 +20,7 @@ namespace NewTCEApp.ViewModels
             DateTime targetDateTime = MyCalendar.NavigatedDate.AddMonths(amount);
 
             MyCalendar.Navigate(targetDateTime - MyCalendar.NavigatedDate);
+            
         }
     }
 }

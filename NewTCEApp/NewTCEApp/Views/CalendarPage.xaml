@@ -7,8 +7,9 @@
 
     <ContentPage.Content>
         <StackLayout>
+
             <xc:CalendarView
-            BackgroundColor="Orange"
+            BackgroundColor="#FF8200"
             BackwardsArrowCommand="{Binding NavigateCalendarCommand}"
             Days="{Binding MyCalendar.Days}"
             DaysOfWeek="{Binding MyCalendar.DayNamesOrder}"
@@ -22,6 +23,34 @@
                 <xc:CalendarView.BackwardsArrowCommandParameter>
                     <x:Int32>-1</x:Int32>
                 </xc:CalendarView.BackwardsArrowCommandParameter>
+
+                <xc:CalendarView.DayTemplate>
+                    <DataTemplate>
+                        <ContentView>
+                            <Frame
+                                Margin="2.5"
+                                Padding="0"
+                                CornerRadius="100"
+                                HasShadow="False">
+                                <xc:DayView
+                                    CurrentMonthTextColor="White"
+                                    OtherMonthTextColor="Black"
+                                    TodayBackgroundColor="White"
+                                    TodayTextColor="#FF8200"
+                                    CurrentMonthBackgroundColor="#FF8200"
+                                    OtherMonthBackgroundColor="#FF8200"
+                                    CurrentMonthCommandParameter="{Binding DateTime}"
+                                    DateTime="{Binding DateTime}"
+                                    IsCurrentMonth="{Binding IsCurrentMonth}"
+                                    IsInvalid="{Binding IsInvalid}"
+                                    IsSelected="{Binding IsSelected}"
+                                    IsToday="{Binding IsToday}"
+                                    SelectedCommandParameter="{Binding DateTime}"
+                                    TodayCommandParameter="{Binding DateTime}"/>
+                            </Frame>
+                        </ContentView>
+                    </DataTemplate>
+                </xc:CalendarView.DayTemplate>
             </xc:CalendarView>
         </StackLayout>
     </ContentPage.Content>
