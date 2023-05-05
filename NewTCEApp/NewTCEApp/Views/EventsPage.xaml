@@ -10,6 +10,7 @@
              Title="{Binding Title}"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
              xmlns:Models="clr-namespace:NewTCEApp.Models"
+             Shell.BackgroundColor="#ff8200"
              ios:Page.UseSafeArea="True">
     <ContentPage.BindingContext>
         <viewmodel:EventsViewModel/>
@@ -78,6 +79,7 @@
         </CollectionView>
 
         <Button Text="Load"
+                BackgroundColor="#ff8200"
                 Command="{Binding GetEventsCommand}"
                 IsEnabled="{Binding IsNotBusy}"
                 Grid.Row="1"
