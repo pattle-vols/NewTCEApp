@@ -14,7 +14,8 @@ namespace NewTCEApp
 			Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
 			Routing.RegisterRoute(nameof(EventsPage), typeof(EventsPage));
 			Routing.RegisterRoute(nameof(DetailsPage), typeof(DetailsPage));
-		}
+            Routing.RegisterRoute(nameof(SupportPage), typeof(SupportPage));
+        }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {

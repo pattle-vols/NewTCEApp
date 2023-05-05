@@ -41,12 +41,12 @@
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
                                     <Setter Property="BackgroundColor" Value="{x:OnPlatform UWP=Transparent, iOS=White}" />
-                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="Gray" />
                                 </VisualState.Setters>
                             </VisualState>
                             <VisualState x:Name="Selected">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                    <Setter Property="BackgroundColor" Value="#FF8200" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -63,7 +63,7 @@
                         <VisualStateGroup x:Name="CommonStates">
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="Gray" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -82,16 +82,20 @@
         <ShellContent ContentTemplate="{DataTemplate local:LoginPage}"/>
     </ShellItem>
 
-    <FlyoutItem Title="Home" Icon="icon_about.png">
+    <FlyoutItem Title="Home">
         <ShellContent ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage"/>
     </FlyoutItem>
 
-    <FlyoutItem Title="Upcoming Events" Icon="reminders.png">
+    <FlyoutItem Title="Upcoming Events">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:EventsPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="Calendar">
         <ShellContent ContentTemplate="{DataTemplate local:CalendarPage}" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Resources">
+        <ShellContent ContentTemplate="{DataTemplate local:SupportPage}" />
     </FlyoutItem>
     <!--
     <FlyoutItem Title="Browse" Icon="icon_feed.png">

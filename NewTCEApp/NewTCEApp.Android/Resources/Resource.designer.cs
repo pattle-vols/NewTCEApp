@@ -14,7 +14,7 @@ namespace NewTCEApp.Droid
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "13.2.0.93")]
+	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
 	public partial class Resource
 	{
 		
@@ -153,6 +153,7 @@ namespace NewTCEApp.Droid
 			global::Xamarin.Essentials.Resource.Id.text2 = global::NewTCEApp.Droid.Resource.Id.text2;
 			global::Xamarin.Essentials.Resource.Id.time = global::NewTCEApp.Droid.Resource.Id.time;
 			global::Xamarin.Essentials.Resource.Id.title = global::NewTCEApp.Droid.Resource.Id.title;
+			global::Xamarin.Essentials.Resource.Id.view_tree_lifecycle_owner = global::NewTCEApp.Droid.Resource.Id.view_tree_lifecycle_owner;
 			global::Xamarin.Essentials.Resource.Integer.status_bar_notification_info_maxnum = global::NewTCEApp.Droid.Resource.Integer.status_bar_notification_info_maxnum;
 			global::Xamarin.Essentials.Resource.Layout.browser_actions_context_menu_page = global::NewTCEApp.Droid.Resource.Layout.browser_actions_context_menu_page;
 			global::Xamarin.Essentials.Resource.Layout.browser_actions_context_menu_row = global::NewTCEApp.Droid.Resource.Layout.browser_actions_context_menu_row;

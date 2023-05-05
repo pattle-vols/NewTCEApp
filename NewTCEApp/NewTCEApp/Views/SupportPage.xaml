@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NewTCEApp.Views.SupportPage"
+             Shell.BackgroundColor="#FF8200">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <ScrollView Orientation="Vertical">
+                    <StackLayout x:Name="scroll" Orientation="Vertical" Padding="15,40,15,40" Spacing="18">
+                        <Button Margin="0,10,0,0" Text="Contact the TCE" Command="{Binding Contact}" CommandParameter="https://tickle.utk.edu/contact/" 
+                                BackgroundColor="#FF8200" TextColor="White"/>
+                        <Button Margin="0,10,0,0" Text="TCE Resources" Command="{Binding Resource}" CommandParameter="https://tickle.utk.edu/student-experience/student-success/resources/" 
+                                BackgroundColor="#FF8200" TextColor="White"/>
+                        <Button Margin="0,10,0,0" Text="Office of the Dean" Command="{Binding Dean}" CommandParameter="https://tickle.utk.edu/about/deans-office/" 
+                                BackgroundColor="#FF8200" TextColor="White"/>
+                        <Button Margin="0,10,0,0" Text="Counseling Center" Command="{Binding Counceling}" CommandParameter="https://counselingcenter.utk.edu/" 
+                                BackgroundColor="#FF8200" TextColor="White"/>
+                        <Button Margin="0,10,0,0" Text="Office of Student Success" Command="{Binding Success}" CommandParameter="https://tickle.utk.edu/student-experience/student-success/" 
+                                BackgroundColor="#FF8200" TextColor="White"/>
+                        <Button Margin="0,10,0,0" Text="UT Student Organizations" Command="{Binding Orgs}" CommandParameter="https://utk.campuslabs.com/engage/organizations" 
+                                BackgroundColor="#FF8200" TextColor="White"/>
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
