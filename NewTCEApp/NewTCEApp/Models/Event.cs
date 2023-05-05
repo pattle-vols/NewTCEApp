@@ -1,15 +1,7 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
-using System.Windows.Input;
-using Xamarin.Forms;
-
-namespace NewTCEApp.Models
+﻿namespace NewTCEApp.Models
 {
-	//[ObservableObject]
-	public partial class Event
+    //[ObservableObject]
+    public partial class Event
 	{
 		public int Id { get; set; }
 		public string Title { get; set; }

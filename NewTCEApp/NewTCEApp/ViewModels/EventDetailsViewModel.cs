@@ -1,13 +1,8 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-using NewTCEApp.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace NewTCEApp.ViewModels
 {
-	[QueryProperty("Event", "Event")]
+    [QueryProperty("Event", "Event")]
 
 	
 	public partial class EventDetailsViewModel : BaseViewModel

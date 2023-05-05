@@ -1,15 +1,11 @@
 ﻿using NewTCEApp.Models;
-using NewTCEApp.Services;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Xamarin.Forms;
 
 namespace NewTCEApp.ViewModels
 {
-	public class detail
+    public class detail
 	{
 		public string Title { get; set; }
 		public string Url { get; set; }

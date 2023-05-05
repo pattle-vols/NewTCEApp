@@ -1,18 +1,11 @@
-﻿using NewTCEApp.Models;
-using NewTCEApp.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using NewTCEApp.ViewModels;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace NewTCEApp.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class DetailsPage : ContentPage
 	{
 		static detail _detail = new detail();
