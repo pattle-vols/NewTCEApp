@@ -12,7 +12,6 @@ namespace NewTCEApp
 			//Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
 			//Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
 			Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
-			Routing.RegisterRoute(nameof(EventsPage), typeof(EventsPage));
 			Routing.RegisterRoute(nameof(DetailsPage), typeof(DetailsPage));
             Routing.RegisterRoute(nameof(SupportPage), typeof(SupportPage));
         }

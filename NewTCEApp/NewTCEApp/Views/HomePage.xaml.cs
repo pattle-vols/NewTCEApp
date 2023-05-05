@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace NewTCEApp.Views
@@ -16,9 +10,13 @@ namespace NewTCEApp.Views
         {
             InitializeComponent();
         }
-        async void Button_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new LoginPage());
-        }
+        /*
+		async void itemSelect(object sender, SelectedItemChangedEventArgs e)
+		{
+			//var item = (Event)e.SelectedItem;
+			var item = e.SelectedItem as Event;
+			await Navigation.PushAsync(new DetailsPage(item.Url));
+		}
+		*/
     }
 }

@@ -86,10 +86,6 @@
         <ShellContent ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage"/>
     </FlyoutItem>
 
-    <FlyoutItem Title="Upcoming Events">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:EventsPage}" />
-    </FlyoutItem>
-
     <FlyoutItem Title="Calendar">
         <ShellContent ContentTemplate="{DataTemplate local:CalendarPage}" />
     </FlyoutItem>
