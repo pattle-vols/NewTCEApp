@@ -24,13 +24,11 @@ namespace NewTCEApp.Views
             string password = passwordEntry.Text;
             string token = await userRepository.SignIn(email, password);
 
-            if (!string.IsNullOrEmpty(token))
+            if (token != string.Empty)
                 await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
             else
-                Device.BeginInvokeOnMainThread(async () =>
-                {
-                    await this.DisplayAlert("Error", "Invalid Email or Password", "Ok");
-                });
+                await DisplayAlert("Error", "Invalid Email or Password", "Ok");
+
         }
         async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {

@@ -1,4 +1,5 @@
 ﻿using Firebase.Auth;
+using System;
 using System.Threading.Tasks;
 
 namespace NewTCEApp
@@ -25,12 +26,16 @@ namespace NewTCEApp
 
         public async Task<string> SignIn(string email, string password)
         {
-            var token = await authProvider.SignInWithEmailAndPasswordAsync(email, password);
-            if(!string.IsNullOrEmpty(token.FirebaseToken))
+            try
             {
+                var token = await authProvider.SignInWithEmailAndPasswordAsync(email, password);
                 return token.FirebaseToken;
             }
-            return "";
+            catch(Exception e)
+            {
+                return string.Empty;
+            }
+            
         }
     }
 }
